@@ -85,8 +85,8 @@ QList<entry> MainWindow::fakeListEntries()
 void MainWindow::SaveListEntries(QList<entry> lEntries)
 {
     QDir dir;
-    dir.mkpath("/home/s/.config/qtlauncher/");
-    QFile file("/home/s/.config/qtlauncher/entries.list");
+    dir.mkpath(QDir::homePath() + QString("/.config/qtlauncher/"));
+    QFile file(QDir::homePath() + QString( "/.config/qtlauncher/entries.list"));
     if (file.open(QFile::WriteOnly | QFile::Truncate))
     {
         QTextStream stream(&file);
@@ -106,8 +106,8 @@ void MainWindow::SaveListEntries(QList<entry> lEntries)
 QList<entry>  MainWindow::LoadListEntries()
 {
     QDir dir;
-    dir.mkpath("/home/s/.config/qtlauncher/");
-    QFile file("/home/s/.config/qtlauncher/entries.list");
+    dir.mkpath(QDir::homePath() + QString("/.config/qtlauncher/"));
+    QFile file(QDir::homePath() + QString("/.config/qtlauncher/entries.list"));
     if (file.open(QFile::ReadOnly))
     {
         QTextStream stream(&file);
@@ -127,7 +127,7 @@ QList<entry>  MainWindow::LoadListEntries()
         }
         lEntries.append(e); /*add Last Entry*/
     }
-    else qDebug()<< __func__<<": unable to create file";
+    else qDebug()<< __func__<<": unable to open file";
     return lEntries; //TODO: rivedere
 }
 
