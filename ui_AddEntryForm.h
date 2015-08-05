@@ -11,15 +11,15 @@
 #define UI_ADDENTRYFORM_H
 
 #include <QtCore/QVariant>
-#include <QtGui/QAction>
-#include <QtGui/QApplication>
-#include <QtGui/QButtonGroup>
-#include <QtGui/QDialog>
-#include <QtGui/QDialogButtonBox>
-#include <QtGui/QHeaderView>
-#include <QtGui/QLabel>
-#include <QtGui/QLineEdit>
-#include <QtGui/QPushButton>
+#include <QAction>
+#include <QApplication>
+#include <QButtonGroup>
+#include <QDialog>
+#include <QDialogButtonBox>
+#include <QHeaderView>
+#include <QLabel>
+#include <QLineEdit>
+#include <QPushButton>
 
 QT_BEGIN_NAMESPACE
 
@@ -88,16 +88,16 @@ public:
 
     void retranslateUi(QDialog *Dialog)
     {
-        Dialog->setWindowTitle(QApplication::translate("Dialog", "Dialog", 0, QApplication::UnicodeUTF8));
+        Dialog->setWindowTitle(QApplication::translate("Dialog", "Dialog", 0));
         editChooseCommand->setPlaceholderText(QString());
-        label->setText(QApplication::translate("Dialog", "Command", 0, QApplication::UnicodeUTF8));
-        btnChooseCmd->setText(QApplication::translate("Dialog", "...", 0, QApplication::UnicodeUTF8));
-        btnChooseIcon->setText(QApplication::translate("Dialog", "...", 0, QApplication::UnicodeUTF8));
-        label_2->setText(QApplication::translate("Dialog", "Icon", 0, QApplication::UnicodeUTF8));
+        label->setText(QApplication::translate("Dialog", "Command", 0));
+        btnChooseCmd->setText(QApplication::translate("Dialog", "...", 0));
+        btnChooseIcon->setText(QApplication::translate("Dialog", "...", 0));
+        label_2->setText(QApplication::translate("Dialog", "Icon", 0));
         editChooseIcon->setPlaceholderText(QString());
-        label_3->setText(QApplication::translate("Dialog", "Description", 0, QApplication::UnicodeUTF8));
+        label_3->setText(QApplication::translate("Dialog", "Description", 0));
         editChooseDecription->setPlaceholderText(QString());
-        label_4->setText(QApplication::translate("Dialog", "Tooltip", 0, QApplication::UnicodeUTF8));
+        label_4->setText(QApplication::translate("Dialog", "Tooltip", 0));
         editChooseTooltip->setPlaceholderText(QString());
     } // retranslateUi
 

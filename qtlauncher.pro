@@ -1,3 +1,4 @@
+QT += widgets
 HEADERS += entry.h \
     mainwindow.h \
     launchbutton.h \
